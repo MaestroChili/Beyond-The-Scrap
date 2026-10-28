@@ -1,0 +1,18 @@
+EMBERFORGE FREE SAMPLE LICENSE — Version 1.0
+
+This license applies to the icons, spritesheets and editable source files in Emberforge — Free Sample. "Seller" means Candle Light, the seller at https://candlelightgame.itch.io/. "You" means the individual or legal entity that lawfully acquired this pack from the Seller.
+
+PERMITTED USE
+The Seller grants you a worldwide, perpetual, non-exclusive, royalty-free license to use and modify the assets in unlimited personal and commercial projects, including games, applications, films, rendered images and client work. No additional per-project fee or attribution is required.
+
+You may distribute the assets as an incorporated part of a finished project. You may share source files privately with employees or contractors who need them to work on your projects, provided they follow this license, do not use them independently, and stop retaining separate copies when their work ends. Your license does not transfer to those collaborators or to your clients for unrelated reuse.
+
+REDISTRIBUTION LIMITS
+You may not sell, sublicense, upload, give away or otherwise redistribute the original or modified assets as standalone images, an asset pack, a stock library, or a template whose purpose is to provide reusable assets. Do not make the source files publicly downloadable, including in a public source-code repository. Distributing an asset with only format, colour or minor artwork changes is still redistribution of that asset.
+
+Finished projects may include the assets in the form needed to run or display the project. Do not deliberately offer an asset-extraction feature or a separate download of the reusable asset files. An asset license does not transfer ownership of the Seller's product, branding or storefront.
+
+AVAILABILITY AND WARRANTY
+The assets are supplied as-is. No specific engine compatibility, future updates or support period is promised. To the extent permitted by applicable law, the Seller disclaims implied warranties and liability for indirect loss arising from use of the assets. Nothing in this license limits consumer rights or other rights that cannot lawfully be excluded.
+
+This license does not restrict any rights you have independently of it under applicable law.

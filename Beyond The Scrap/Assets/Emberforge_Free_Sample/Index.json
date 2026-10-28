@@ -1,0 +1,222 @@
+[
+  {
+    "file": "001_Compact_blacksmith_anvil.png",
+    "group": "Smithing_Stations",
+    "height": 48,
+    "id": 1,
+    "name": "Compact_blacksmith_anvil",
+    "width": 48,
+    "x": 0,
+    "y": 0,
+    "collection": "Emberforge"
+  },
+  {
+    "file": "006_Swage_block.png",
+    "group": "Smithing_Stations",
+    "height": 48,
+    "id": 6,
+    "name": "Swage_block",
+    "width": 48,
+    "x": 48,
+    "y": 0,
+    "collection": "Emberforge"
+  },
+  {
+    "file": "021_Blacksmith_forging_hammer.png",
+    "group": "Workshop_Tools",
+    "height": 48,
+    "id": 21,
+    "name": "Blacksmith_forging_hammer",
+    "width": 48,
+    "x": 96,
+    "y": 0,
+    "collection": "Emberforge"
+  },
+  {
+    "file": "029_Round_nose_pliers.png",
+    "group": "Workshop_Tools",
+    "height": 48,
+    "id": 29,
+    "name": "Round_nose_pliers",
+    "width": 48,
+    "x": 144,
+    "y": 0,
+    "collection": "Emberforge"
+  },
+  {
+    "file": "041_Hematite_ore.png",
+    "group": "Ores_and_Fuel",
+    "height": 48,
+    "id": 41,
+    "name": "Hematite_ore",
+    "width": 48,
+    "x": 192,
+    "y": 0,
+    "collection": "Emberforge"
+  },
+  {
+    "file": "042_Mounted_lodestone.png",
+    "group": "Ores_and_Fuel",
+    "height": 48,
+    "id": 42,
+    "name": "Mounted_lodestone",
+    "width": 48,
+    "x": 240,
+    "y": 0,
+    "collection": "Emberforge"
+  },
+  {
+    "file": "061_Iron_billet.png",
+    "group": "Metal_Stock",
+    "height": 48,
+    "id": 61,
+    "name": "Iron_billet",
+    "width": 48,
+    "x": 288,
+    "y": 0,
+    "collection": "Emberforge"
+  },
+  {
+    "file": "065_Steel_angle_bracket.png",
+    "group": "Metal_Stock",
+    "height": 48,
+    "id": 65,
+    "name": "Steel_angle_bracket",
+    "width": 48,
+    "x": 336,
+    "y": 0,
+    "collection": "Emberforge"
+  },
+  {
+    "file": "081_Brass_spur_gear.png",
+    "group": "Clockwork_Parts",
+    "height": 48,
+    "id": 81,
+    "name": "Brass_spur_gear",
+    "width": 48,
+    "x": 384,
+    "y": 0,
+    "collection": "Emberforge"
+  },
+  {
+    "file": "085_Clockwork_index_wheel.png",
+    "group": "Clockwork_Parts",
+    "height": 48,
+    "id": 85,
+    "name": "Clockwork_index_wheel",
+    "width": 48,
+    "x": 432,
+    "y": 0,
+    "collection": "Emberforge"
+  },
+  {
+    "file": "101_Leather_smithing_apron.png",
+    "group": "Forge_Safety",
+    "height": 48,
+    "id": 101,
+    "name": "Leather_smithing_apron",
+    "width": 48,
+    "x": 0,
+    "y": 48,
+    "collection": "Emberforge"
+  },
+  {
+    "file": "107_Ash_sweeping_brush.png",
+    "group": "Forge_Safety",
+    "height": 48,
+    "id": 107,
+    "name": "Ash_sweeping_brush",
+    "width": 48,
+    "x": 48,
+    "y": 48,
+    "collection": "Emberforge"
+  },
+  {
+    "file": "121_Gold_leaf_booklet.png",
+    "group": "Artisan_Finishes",
+    "height": 48,
+    "id": 121,
+    "name": "Gold_leaf_booklet",
+    "width": 48,
+    "x": 96,
+    "y": 48,
+    "collection": "Emberforge"
+  },
+  {
+    "file": "127_Burnishing_agate_tool.png",
+    "group": "Artisan_Finishes",
+    "height": 48,
+    "id": 127,
+    "name": "Burnishing_agate_tool",
+    "width": 48,
+    "x": 144,
+    "y": 48,
+    "collection": "Emberforge"
+  },
+  {
+    "file": "141_Salamander_scale_vial.png",
+    "group": "Fire_Alchemy",
+    "height": 48,
+    "id": 141,
+    "name": "Salamander_scale_vial",
+    "width": 48,
+    "x": 192,
+    "y": 48,
+    "collection": "Emberforge"
+  },
+  {
+    "file": "150_Glass_melting_crucible.png",
+    "group": "Fire_Alchemy",
+    "height": 48,
+    "id": 150,
+    "name": "Glass_melting_crucible",
+    "width": 48,
+    "x": 240,
+    "y": 48,
+    "collection": "Emberforge"
+  },
+  {
+    "file": "161_Riveted_iron_lockbox.png",
+    "group": "Crafted_Wares",
+    "height": 48,
+    "id": 161,
+    "name": "Riveted_iron_lockbox",
+    "width": 48,
+    "x": 288,
+    "y": 48,
+    "collection": "Emberforge"
+  },
+  {
+    "file": "173_Iron_padlock_mechanism.png",
+    "group": "Crafted_Wares",
+    "height": 48,
+    "id": 173,
+    "name": "Iron_padlock_mechanism",
+    "width": 48,
+    "x": 336,
+    "y": 48,
+    "collection": "Emberforge"
+  },
+  {
+    "file": "181_Clockwork_beetle.png",
+    "group": "Automaton_Curios",
+    "height": 48,
+    "id": 181,
+    "name": "Clockwork_beetle",
+    "width": 48,
+    "x": 384,
+    "y": 48,
+    "collection": "Emberforge"
+  },
+  {
+    "file": "199_Cog_puzzle_cube.png",
+    "group": "Automaton_Curios",
+    "height": 48,
+    "id": 199,
+    "name": "Cog_puzzle_cube",
+    "width": 48,
+    "x": 432,
+    "y": 48,
+    "collection": "Emberforge"
+  }
+]
