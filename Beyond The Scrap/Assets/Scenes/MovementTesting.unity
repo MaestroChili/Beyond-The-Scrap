@@ -569,9 +569,10 @@ MonoBehaviour:
   verticalSpeed: 20
   horizontalSpeed: 20
   maxHealth: 10
-  jumpForce: 16
+  jumpForce: 3
   coyoteTime: 0.1
   jumpBufferTime: 0.1
+  grounded: 0
   velocity: {x: 0, y: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
