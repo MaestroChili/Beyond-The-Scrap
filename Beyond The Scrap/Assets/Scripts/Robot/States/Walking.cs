@@ -1,16 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Walking : MonoBehaviour
+public class Walking : RobotState
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    public Walking(RobotController robot) : base(robot)
     {
+    }
+
+    public override void OnStateEnter() {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public override void Update() {
+
+    }
+
+    public override void OnStateExit() {
+
     }
 }
