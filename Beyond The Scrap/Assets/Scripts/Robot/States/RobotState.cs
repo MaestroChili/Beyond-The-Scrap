@@ -9,7 +9,9 @@ public abstract class RobotState
 
     public virtual void OnStateEnter() { }
 
-    public virtual void Update() { }
+    public virtual void Update() { 
+        
+    }
 
     public virtual void OnStateExit() { }
 }

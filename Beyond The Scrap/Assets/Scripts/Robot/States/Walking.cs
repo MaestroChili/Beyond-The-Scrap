@@ -32,7 +32,8 @@ public class Walking : RobotState
 
         // Get the input from inputActions -> Player -> Jump action
         bool jumpPressed = robot.inputActions.Player.Jump.WasPressedThisFrame();
-        if (jumpPressed) {
+        if (jumpPressed && robot.grounded) {
+            Debug.Log("jump");
             // Launch the robot up. Probably adding vertical  velocity to current velocity.
             robot.velocity.y = robot.jumpForce;
             robot.SwitchState(new Jumping(robot));
