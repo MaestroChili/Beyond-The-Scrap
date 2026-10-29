@@ -4,11 +4,18 @@ public class RobotController : MonoBehaviour
 {
 
     // Character Stats
-    public float acceleration;
-    public float maxVerticalSpeed;
-    public float maxHorizontalSpeed;
+    public float acceleration = 2f;
+    public float verticalSpeed = 20f;
+    public float horizontalSpeed = 20f;
     public int maxHealth = 10;
     private int currentHealth;
+    public float jumpForce = 16f;
+    public float coyoteTime = 0.1f;       // grace after leaving ground
+    public float jumpBufferTime = 0.1f;   // grace before landing
+    
+    // Input thingy
+    public InputActions inputActions;
+
 
     // Collider Settings
     private Collider2D capsuleCollider;
@@ -16,7 +23,7 @@ public class RobotController : MonoBehaviour
     private float vertical_raycast_offset;
 
 
-    private Vector2 velocity;
+    public Vector2 velocity;
     public RobotState currentState;
 
 
@@ -26,7 +33,7 @@ public class RobotController : MonoBehaviour
         currentHealth = maxHealth;
         velocity = Vector3.zero;
         vertical_raycast_offset = gameObject.GetComponent<SpriteRenderer>().bounds.size.y / 2.0f;
-        Debug.Log(vertical_raycast_offset);
+        inputActions = new InputActions();
     }
 
     private void Start()
@@ -45,7 +52,24 @@ public class RobotController : MonoBehaviour
             grounded = true;
         } else { grounded = false; }
 
+        // Run the update function in the current state
+        if (currentState != null) {
+            currentState.Update();
+        }
 
+        // Apply position update based on current velocity every frame
+        //Debug.Log(velocity);
+        transform.Translate(velocity * Time.deltaTime);
+
+    }
+
+
+    private void OnEnable() {
+        inputActions.Enable();
+    }
+
+    private void OnDisable() {
+        inputActions.Disable();
     }
 
 
