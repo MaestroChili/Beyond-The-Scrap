@@ -17,7 +17,9 @@ public class Walking : RobotState
     }
 
     public override void Update() {
-        // Get the input from the ImputActions player -> movement vector
+        // Get the input from the InputActions -> Player -> Movement vector
+        // Use the inputs x (horizontal) value to determine the velocity for the current frame
+        // Mathf.MoveTowards is used to make a smooth dampened acceleration and deceleration
         Vector2 moveInput = robot.inputActions.Player.Movement.ReadValue<Vector2>();
         if (moveInput != Vector2.zero) {
             airHoriVelo = Mathf.MoveTowards(robot.velocity.x, robot.horizontalSpeed * moveInput.x, robot.acceleration);
@@ -25,9 +27,10 @@ public class Walking : RobotState
             airHoriVelo = Mathf.MoveTowards(robot.velocity.x, 0, robot.acceleration);
         }
 
-        Debug.Log(airHoriVelo);
+        // Update The Robots velocity on the horizontal axis based on calculation
         robot.velocity.x = airHoriVelo;
 
+        // Get the input from inputActions -> Player -> Jump action
         bool jumpPressed = robot.inputActions.Player.Jump.WasPressedThisFrame();
         if (jumpPressed) {
             // Launch the robot up. Probably adding vertical  velocity to current velocity.
