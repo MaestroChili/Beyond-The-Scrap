@@ -13,6 +13,7 @@ public class RobotController : MonoBehaviour
     public float coyoteTime = 0.1f;       // grace after leaving ground
     public float jumpBufferTime = 0.1f;   // grace before landing
     public float gravity = 10f;
+    public bool hasLeftGround = false;
     
     // Input thingy
     public InputActions inputActions;

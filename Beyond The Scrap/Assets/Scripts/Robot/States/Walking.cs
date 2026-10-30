@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class Walking : RobotState
 {
 
-    private float horiVelo;
+    //private float horiVelo;
 
     public Walking(RobotController robot) : base(robot)
     {
@@ -17,18 +17,8 @@ public class Walking : RobotState
     }
 
     public override void Update() {
-        // Get the input from the InputActions -> Player -> Movement vector
-        // Use the inputs x (horizontal) value to determine the velocity for the current frame
-        // Mathf.MoveTowards is used to make a smooth dampened acceleration and deceleration
-        Vector2 moveInput = robot.inputActions.Player.Movement.ReadValue<Vector2>();
-        if (moveInput != Vector2.zero) {
-            horiVelo = Mathf.MoveTowards(robot.velocity.x, robot.horizontalSpeed * moveInput.x, robot.acceleration);
-        } else {
-            horiVelo = Mathf.MoveTowards(robot.velocity.x, 0, robot.acceleration);
-        }
 
-        // Update The Robots velocity on the horizontal axis based on calculation
-        robot.velocity.x = horiVelo;
+        MoveHorizontally();
 
         // Get the input from inputActions -> Player -> Jump action
         bool jumpPressed = robot.inputActions.Player.Jump.WasPressedThisFrame();
@@ -41,6 +31,11 @@ public class Walking : RobotState
         } else {
             jumpPressed = false;
             robot.velocity.y = 0;
+            // Check if we've left the ground yet
+            if (!robot.grounded) {
+                robot.hasLeftGround = true;
+                robot.SwitchState(new Falling(robot));
+            }
         }
     }
 
