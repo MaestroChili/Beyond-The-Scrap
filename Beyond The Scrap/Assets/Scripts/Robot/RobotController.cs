@@ -57,12 +57,15 @@ public class RobotController : MonoBehaviour
         } else { grounded = false; }
 
         // Inside RobotController.cs Update()
-        if (!grounded) {
-            // Apply gravity over time if not on the ground
-            velocity.y -= gravity * Time.deltaTime; 
-        } else if (velocity.y < 0) {
-            velocity.y = 0; // Snap to 0 when grounded so we don't infinitely accumulate negative velocity
-        }       
+        if (!(currentState is RobotDialogueState))
+        {
+            if (!grounded) {
+                velocity.y -= gravity * Time.deltaTime;
+            } 
+            else if (velocity.y < 0) {
+                velocity.y = 0;
+            }
+        }      
 
         // Run the update function in the current state
         if (currentState != null) {
@@ -73,8 +76,6 @@ public class RobotController : MonoBehaviour
         //Debug.Log(velocity);
         //transform.Translate(velocity * Time.deltaTime);
         //rb.velocity = velocity;
-        
-
     }
 
     private void FixedUpdate() {
@@ -106,4 +107,10 @@ public class RobotController : MonoBehaviour
             currentState.OnStateEnter();
         }
     }
+
+    public bool IsInDialogueState()
+    {
+        return currentState is RobotDialogueState;
+    }
 }
+
