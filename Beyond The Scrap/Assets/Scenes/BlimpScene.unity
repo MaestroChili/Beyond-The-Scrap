@@ -686,7 +686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.91531056, g: 0.5921569, b: 0.85882354, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -725,7 +725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterParallax
   character: {fileID: 1121350785}
   offsetMultiplier: 0.1
-  smoothTime: 0.02
+  smoothTime: 0.001
 --- !u!1001 &753826495
 PrefabInstance:
   m_ObjectHideFlags: 0
