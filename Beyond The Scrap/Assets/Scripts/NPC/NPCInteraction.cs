@@ -12,9 +12,16 @@ public class NPCInteraction : MonoBehaviour
 
     private RobotController playerRobot;
 
+    private SpriteRenderer npcSprite;
+
     private void Start()
     {
+        if (dialogueManager == null)
+            dialogueManager = FindFirstObjectByType<DialogueManager>();
+        
         npcPrompt.SetActive(false);
+
+        npcSprite = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -52,6 +59,12 @@ public class NPCInteraction : MonoBehaviour
         {
             // Return to walking
             playerRobot.SwitchState(new Walking(playerRobot));
+        }
+
+        if (dialogueManager.IsDialogueActive() && playerRobot != null)
+        {
+            // flip if Crank faces the wrong way
+            npcSprite.flipX = playerRobot.transform.position.x < transform.position.x;
         }
     }
 
