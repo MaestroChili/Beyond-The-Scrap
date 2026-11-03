@@ -16,6 +16,10 @@ public class DialogueManager : MonoBehaviour
     public float typingSpeed = 0.03f;
     private bool isTyping = false;
     private string currentSentence;
+
+    public bool IsTyping() { return isTyping; }
+    
+
     // INTRO DIALOGUE
     private string[] introSpeakers =
     {

@@ -21,13 +21,16 @@ public class RobotController : MonoBehaviour
 
     // Collider Settings
     private Collider2D capsuleCollider;
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
     public bool grounded;
     private float vertical_raycast_offset;
 
 
     public Vector2 velocity;
     public RobotState currentState;
+
+    private Animator anim;
+    private SpriteRenderer sr;
 
 
     private void Awake()
@@ -38,6 +41,9 @@ public class RobotController : MonoBehaviour
         velocity = Vector3.zero;
         vertical_raycast_offset = gameObject.GetComponent<SpriteRenderer>().bounds.size.y / 2.0f;
         inputActions = new InputActions();
+
+        anim = GetComponent<Animator>();
+    sr = GetComponent<SpriteRenderer>();
     }
 
     private void Start()
@@ -51,10 +57,11 @@ public class RobotController : MonoBehaviour
         // Check if Character is on the ground
         // Cast a ray from the center bottom of character 0.0015 units down
         // Only Interacts with Objects in the Ground Layer
-        RaycastHit2D groundHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y), Vector2.down, vertical_raycast_offset + 0.005f, LayerMask.GetMask("Ground"));
+    RaycastHit2D groundHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y), Vector2.down, vertical_raycast_offset + 0.005f, LayerMask.GetMask("Ground"));       
         if (groundHit.collider) {
             grounded = true;
-        } else { grounded = false; }
+        } 
+        else { grounded = false; }
 
         // Inside RobotController.cs Update()
         if (!(currentState is RobotDialogueState))
@@ -70,6 +77,11 @@ public class RobotController : MonoBehaviour
         // Run the update function in the current state
         if (currentState != null) {
             currentState.Update();
+
+            anim.SetFloat("speed", Mathf.Abs(velocity.x));
+
+            if (velocity.x > 0.1f) sr.flipX = false;
+            else if (velocity.x < -0.1f) sr.flipX = true;
         }        
 
         // Apply position update based on current velocity every frame
