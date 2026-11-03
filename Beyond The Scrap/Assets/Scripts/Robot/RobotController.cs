@@ -21,7 +21,7 @@ public class RobotController : MonoBehaviour
 
     // Collider Settings
     private Collider2D capsuleCollider;
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
     public bool grounded;
     private float vertical_raycast_offset;
 
