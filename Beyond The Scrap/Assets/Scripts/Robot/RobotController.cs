@@ -57,7 +57,7 @@ public class RobotController : MonoBehaviour
         // Check if Character is on the ground
         // Cast a ray from the center bottom of character 0.0015 units down
         // Only Interacts with Objects in the Ground Layer
-    RaycastHit2D groundHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y), Vector2.down, vertical_raycast_offset + 0.005f, LayerMask.GetMask("Ground"));       
+        RaycastHit2D groundHit = Physics2D.Raycast(capsuleCollider.bounds.center, Vector2.down, vertical_raycast_offset + 0.05f, LayerMask.GetMask("Ground"));
         if (groundHit.collider) {
             grounded = true;
         } 
@@ -66,7 +66,7 @@ public class RobotController : MonoBehaviour
         // Inside RobotController.cs Update()
         if (!(currentState is RobotDialogueState))
         {
-            if (!grounded) {
+            if (!grounded || velocity.y > 0) {
                 velocity.y -= gravity * Time.deltaTime;
             } 
             else if (velocity.y < 0) {
