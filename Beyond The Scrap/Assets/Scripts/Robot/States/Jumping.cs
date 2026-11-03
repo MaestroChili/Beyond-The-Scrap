@@ -26,6 +26,8 @@ public class Jumping : RobotState
             robot.SwitchState(new Falling(robot));
         }
 
+
+        Debug.Log(robot.grounded);
         
     }
 
