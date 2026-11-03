@@ -22,8 +22,6 @@ public class Jumping : RobotState
             robot.hasLeftGround = true;
         }
 
-        Debug.Log("vy: " + robot.velocity.y + "  grounded: " + robot.grounded + "  y pos: " + robot.transform.position.y);
-
         if (robot.velocity.y <= 0f) {
             robot.SwitchState(new Falling(robot));
         }        
