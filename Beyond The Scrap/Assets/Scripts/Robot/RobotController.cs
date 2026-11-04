@@ -58,7 +58,7 @@ public class RobotController : MonoBehaviour
         // Check if Character is on the ground
         // Cast a ray from the center bottom of character 0.0015 units down
         // Only Interacts with Objects in the Ground Layer
-        grounded = Physics2D.Raycast(capsuleCollider.bounds.center, Vector2.down, capsuleCollider.bounds.extents.y + 0.015f, LayerMask.GetMask("Default"));
+        grounded = Physics2D.Raycast(capsuleCollider.bounds.center, Vector2.down, capsuleCollider.bounds.extents.y + 0.015f, LayerMask.GetMask("Ground"));
 
 
         if (inputActions.Player.Jump.WasPressedThisFrame()) {
