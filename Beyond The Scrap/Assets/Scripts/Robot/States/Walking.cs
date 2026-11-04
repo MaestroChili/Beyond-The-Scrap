@@ -6,8 +6,6 @@ using UnityEngine.InputSystem;
 public class Walking : RobotState
 {
 
-    //private float horiVelo;
-
     public Walking(RobotController robot) : base(robot)
     {
     }
@@ -17,24 +15,10 @@ public class Walking : RobotState
     }
 
     public override void Update() {
-
         MoveHorizontally();
-
-        // Get the input from inputActions -> Player -> Jump action
-        bool jumpPressed = robot.inputActions.Player.Jump.WasPressedThisFrame();
-        if (jumpPressed && robot.grounded) {
-            // Launch the robot up. Probably adding vertical  velocity to current velocity.
-            robot.velocity.y = robot.jumpForce;
-            robot.SwitchState(new Jumping(robot));
-            // Switch to jumping state
-        } else {
-            jumpPressed = false;
-            robot.velocity.y = 0;
-            // Check if we've left the ground yet
-            if (!robot.grounded) {
-                robot.hasLeftGround = true;
-                robot.SwitchState(new Falling(robot));
-            }
+        JumpAndFall();
+        if (robot.inputActions.Player.Movement.ReadValue<Vector2>() == Vector2.zero) {
+            robot.SwitchState(new Idle(robot));
         }
     }
 

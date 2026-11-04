@@ -15,12 +15,10 @@ public class Jumping : RobotState
 
     public override void Update() {
 
-        MoveHorizontally();
+        robot.hasLeftGround = true;
 
-        // Check if we've left the ground yet
-        if (!robot.grounded) {
-            robot.hasLeftGround = true;
-        }
+        MoveHorizontally();
+        
 
         if (robot.velocity.y <= 0f) {
             robot.SwitchState(new Falling(robot));
