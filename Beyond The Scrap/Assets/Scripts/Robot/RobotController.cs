@@ -74,7 +74,7 @@ public class RobotController : MonoBehaviour
         }
 
         // Inside RobotController.cs Update()
-        if (!(currentState is RobotDialogueState))
+        if (!IsInDialogueState())
         {
             if (!grounded || velocity.y > 0) {
                 velocity.y -= gravity * Time.deltaTime;
