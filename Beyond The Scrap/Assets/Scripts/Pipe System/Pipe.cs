@@ -8,7 +8,6 @@ public class Pipe : HeatItem
     void Start() {
         sr = GetComponent<SpriteRenderer>();
         baseColor = sr.color;
-        
     }
 
     // Update is called once per frame
