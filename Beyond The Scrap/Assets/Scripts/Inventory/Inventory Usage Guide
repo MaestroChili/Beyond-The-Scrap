@@ -1,0 +1,30 @@
+Implementing the System
+1. Attach Inventory.cs to the target character.
+2. Drag And drop Inventory Canvas from the prefabs. This is the Canvas used to interact with the inventory.
+3. Add InventoryUI.cs to the Scroll View of the Inventory Canvas
+    - UI Item Prefab: general UI Item Prefab that is in the Prefabs/Items folder
+    - Inventory: Drag The Game Object which has the inventory
+    - UI Inventory Panel: Drag the InventoryCanvas/InventoryScrollView/ViewPort/Content there
+4. On the game Object that has the inventory:
+    - UI: Drag the InventoryScrollView into it
+    - AudioSource: Drag an audio source in it (prefferably attached to the character i guess)
+    - Dropped Item Prefab: Prefab/Items/"Dropped Item Prefab"
+    - Pick Up Item Audio: Drag the audio clip you want played when the item is picked up
+    - Drop Item Audio: Same thing
+
+
+Creating An Item
+1. Create Item through create option in the unity dropdown. It is Under Item -> Item. Put it inside the Prefabs/"Item Data" folder.
+2. Create the item prefab you want to use. It needs to have a Collider2D that is disabled.
+    - Add DroppedItem.cs to the prefab
+        * Pickup Delay: timer to prevent instant pickup
+        * Item: The Item you created inside Item Data folder in step one.
+    - Give it the DroppedItem tag
+3. Inside the Item from step 1
+    - Give it an ID
+    - Give Description
+    - Icon: Drag the item sprite inside it
+    - Prefab: Drag the prefab you created in step 2
+
+4. When Placing the item in the world, Enable the Collider2D
+

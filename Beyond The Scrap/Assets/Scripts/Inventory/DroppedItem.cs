@@ -27,7 +27,7 @@ public class DroppedItem : MonoBehaviour
     {
         this.item = item;
         var droppedItem = Instantiate(item.prefab, transform);
-        droppedItem.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+        droppedItem.transform.SetLocalPositionAndRotation(new Vector3(0f, 0.5f, 0f), Quaternion.identity);
         StartCoroutine(EnablePickup(enabledPickupDelay));
     }
 

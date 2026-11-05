@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Padlock
   m_EditorClassIdentifier: Assembly-CSharp::Item
   id: 1
-  description: The best padlock out there
+  description: The best Item
   icon: {fileID: 7303299050318923878, guid: 4409b1d9b340a8409bcc469e34da33b5, type: 3}
   prefab: {fileID: 6609942469148836182, guid: 141993457e648b340bdfde9e2de5aed8, type: 3}
