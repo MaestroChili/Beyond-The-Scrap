@@ -27,6 +27,10 @@ public abstract class HeatItem : MonoBehaviour
         this.hot = false;
     }
 
+    public void ToggleHeat() {
+        this.hot = !this.hot;
+    }
+
     public void ControlTemperature() {
         if (this.hot) {
             heat = Mathf.MoveTowards(heat, maxHeat, heatRate * Time.deltaTime);

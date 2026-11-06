@@ -16,6 +16,7 @@ public class TriggerDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag(targetTag)) {
+            Debug.Log("entered");
             playerInRange = true;
             onTriggerEntered2D.Invoke();
         }

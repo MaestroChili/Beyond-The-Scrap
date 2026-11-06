@@ -34,7 +34,6 @@ public class Valve : HeatItem
         prompt.SetActive(triggerDetector.playerInRange);
 
         if (triggerDetector.playerInRange) {
-            Debug.Log("entered");
             // display the interaction menu
             if (Input.GetKeyDown(KeyCode.E))
             {
