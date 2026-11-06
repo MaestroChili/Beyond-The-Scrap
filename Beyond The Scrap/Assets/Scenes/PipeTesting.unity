@@ -334,6 +334,7 @@ GameObject:
   - component: {fileID: 1384621914}
   - component: {fileID: 1384621913}
   - component: {fileID: 1384621912}
+  - component: {fileID: 1384621915}
   m_Layer: 0
   m_Name: Valve
   m_TagString: SteamPipe
@@ -363,6 +364,7 @@ MonoBehaviour:
   redPerHeat: 0.005
   source: {fileID: 442194899}
   turnedOn: 0
+  prompt: {fileID: 0}
 --- !u!212 &1384621913
 SpriteRenderer:
   serializedVersion: 2
@@ -437,6 +439,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1384621915
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384621911}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.185}
+  m_Radius: 0.2
 --- !u!1001 &2786602064387728393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -549,7 +587,7 @@ PrefabInstance:
     - target: {fileID: 2553123506090806260, guid: f325e8f49cec2445687a225aff448404, type: 3}
       propertyPath: source
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1384621912}
     - target: {fileID: 6943693421977669878, guid: f325e8f49cec2445687a225aff448404, type: 3}
       propertyPath: m_Name
       value: Nozzle
