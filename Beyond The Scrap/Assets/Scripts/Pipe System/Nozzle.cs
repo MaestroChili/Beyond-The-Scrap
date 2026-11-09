@@ -12,6 +12,7 @@ public class Nozzle : HeatItem
         sr = GetComponent<SpriteRenderer>();
         baseColor = sr.color;
         steamCollider = GetComponentInChildren<Collider2D>();
+        steamCollider.enabled = false;
     }
 
     // Update is called once per frame

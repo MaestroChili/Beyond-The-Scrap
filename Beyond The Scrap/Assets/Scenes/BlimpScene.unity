@@ -641,6 +641,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1218140731482359123, guid: 7d5eb6c9e25264b44b6630e9db5dcf82, type: 3}
+      propertyPath: npcName
+      value: Crank
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218140731482359123, guid: 7d5eb6c9e25264b44b6630e9db5dcf82, type: 3}
       propertyPath: npcPrompt
       value: 
       objectReference: {fileID: 510608548}
@@ -1479,7 +1483,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
   dialoguePanel: {fileID: 1305333160}
-  interactPrompt: {fileID: 2019746064}
   speakerText: {fileID: 660949392}
   dialogueText: {fileID: 1531793406}
   typingSpeed: 0.05

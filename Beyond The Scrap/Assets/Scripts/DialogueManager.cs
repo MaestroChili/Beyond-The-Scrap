@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using TMPro;
 using System.Collections;
@@ -5,22 +6,27 @@ using System.Collections;
 public class DialogueManager : MonoBehaviour
 {
     public GameObject dialoguePanel;
-    public GameObject interactPrompt;
+    //public GameObject interactPrompt;
     public TextMeshProUGUI speakerText;
     public TextMeshProUGUI dialogueText;
+
     private int currentLine = 0;
     private bool dialogueActive = false;
     private bool introDialogueComplete = false;
+    private bool isIntroDialogue = false;
 
     private Coroutine typingCoroutine;
     public float typingSpeed = 0.03f;
     private bool isTyping = false;
     private string currentSentence;
 
-    public bool IsTyping() { return isTyping; }
-    
+    // CURRENT DIALOGUE
+    private string[] currentDialogue;
+    private string[] currentSpeakers;
 
-    // INTRO DIALOGUE
+    public bool IsTyping() { return isTyping; }
+
+    // INTRO DIALOGUE (CRANK)
     private string[] introSpeakers =
     {
         "Crank",
@@ -39,7 +45,6 @@ public class DialogueManager : MonoBehaviour
         "Crank",
         "Crank"
     };
-
 
     private string[] introDialogue =
     {
@@ -60,47 +65,80 @@ public class DialogueManager : MonoBehaviour
         "*mumbles* These damn joints."
     };
 
-    // DEFAULT DIALOGUE
+    // DEFAULT DIALOGUE (CRANK)
     private string[] defaultDialogue =
     {
         "You got the Parts?",
         "Go away!"
     };
 
-
     private void Start()
     {
         dialoguePanel.SetActive(false);
     }
 
-
-    // Called when Clanker presses E near Crank
+    // CRANK DIALOGUE
     public void StartDialogue()
     {
         dialogueActive = true;
         currentLine = 0;
 
         dialoguePanel.SetActive(true);
-        interactPrompt.SetActive(true);
+        //interactPrompt.SetActive(true);
 
-        // FIRST TIME TALKING
         if (!introDialogueComplete)
         {
-            ShowIntroLine();
-        }
+            isIntroDialogue = true;
 
-        // AFTER INTRODUCTION
+            currentDialogue = introDialogue;
+            currentSpeakers = introSpeakers;
+
+            ShowCurrentLine();
+        }
         else
         {
-            ShowDefaultDialogue();
+            isIntroDialogue = false;
+
+            int randomDialogue = Random.Range(0, defaultDialogue.Length);
+
+            currentDialogue = new string[]
+            {
+                defaultDialogue[randomDialogue]
+            };
+
+            currentSpeakers = new string[] { "Crank" };
+
+            ShowCurrentLine();
         }
     }
 
+    // NEW NPC DIALOGUE
+    public void StartCustomDialogue(string speaker, string[] dialogue)
+    {
 
-    // INTRO DIALOGUE
+        dialogueActive = true;
+        isIntroDialogue = false;
+        currentLine = 0;
+
+        currentDialogue = dialogue;
+
+        currentSpeakers = new string[dialogue.Length];
+
+        for (int i = 0; i < dialogue.Length; i++)
+        {
+            currentSpeakers[i] = speaker;
+        }
+
+        dialoguePanel.SetActive(true);
+        //interactPrompt.SetActive(true);
+
+        ShowCurrentLine();
+    }
+
+    // ADVANCE DIALOGUE
     public void NextLine()
     {
-        // If text is still typing, show the entire sentence
+        // Finish typing the current sentence first
         if (isTyping)
         {
             StopCoroutine(typingCoroutine);
@@ -109,32 +147,26 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        // Only advance the intro conversation
-        if (!introDialogueComplete)
-        {
-            currentLine++;
+        currentLine++;
 
-            if (currentLine >= introDialogue.Length)
+        if (currentLine >= currentDialogue.Length)
+        {
+            if (isIntroDialogue)
             {
                 introDialogueComplete = true;
-                EndDialogue();
-                return;
             }
 
-            ShowIntroLine();
+            EndDialogue();
+            return;
         }
 
-        // Default dialogue is only one line
-        else
-        {
-            EndDialogue();
-        }
+        ShowCurrentLine();
     }
 
-
-    private void ShowIntroLine()
+    // DISPLAY CURRENT LINE
+    private void ShowCurrentLine()
     {
-        speakerText.text = introSpeakers[currentLine];
+        speakerText.text = currentSpeakers[currentLine];
 
         if (typingCoroutine != null)
         {
@@ -142,31 +174,28 @@ public class DialogueManager : MonoBehaviour
         }
 
         typingCoroutine = StartCoroutine(
-            TypeDialogue(introDialogue[currentLine])
+            TypeDialogue(currentDialogue[currentLine])
         );
     }
 
-
-    // DEFAULT DIALOGUE
-    private void ShowDefaultDialogue()
+    // STEAM REACTION
+    public void SteamHit()
     {
-        speakerText.text = "Crank";
-
-        int randomDialogue =
-            Random.Range(0, defaultDialogue.Length);
-
-        if (typingCoroutine != null)
+        if (dialogueActive)
         {
-            StopCoroutine(typingCoroutine);
+            return;
         }
 
-        typingCoroutine = StartCoroutine(
-            TypeDialogue(defaultDialogue[randomDialogue])
+        StartCustomDialogue(
+            "NPC",
+            new string[]
+            {
+                "OW! HOT! HOT! HOT!"
+            }
         );
     }
 
     // END DIALOGUE
-
     private void EndDialogue()
     {
         if (typingCoroutine != null)
@@ -185,6 +214,7 @@ public class DialogueManager : MonoBehaviour
         return dialogueActive;
     }
 
+    // TYPEWRITER EFFECT
     private IEnumerator TypeDialogue(string sentence)
     {
         currentSentence = sentence;
