@@ -14,7 +14,7 @@ public class GeneratorInteract : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private float closeDelay = 0.8f;
 
-    private bool solved;
+    public bool solved = false;
     private bool open;
 
     private void Start()

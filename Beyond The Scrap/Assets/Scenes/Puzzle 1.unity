@@ -763,7 +763,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4391578229729587507, guid: d1de94b10ece2c310a11de5fe2ff0ec4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00071185606
+      value: -0.0007672891
       objectReference: {fileID: 0}
     - target: {fileID: 5145656902132164539, guid: d1de94b10ece2c310a11de5fe2ff0ec4, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4666,6 +4666,7 @@ MonoBehaviour:
   puzzle: {fileID: 662524348}
   generatorSparks: {fileID: 1675024522}
   closeDelay: 0.8
+  solved: 0
 --- !u!1 &1406413273
 GameObject:
   m_ObjectHideFlags: 0
@@ -10878,7 +10879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3625436899698238770, guid: 7d5eb6c9e25264b44b6630e9db5dcf82, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.22
+      value: -5.06
       objectReference: {fileID: 0}
     - target: {fileID: 3625436899698238770, guid: 7d5eb6c9e25264b44b6630e9db5dcf82, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11077,6 +11078,7 @@ MonoBehaviour:
   collider: {fileID: 175570398}
   triggerDetector: {fileID: 1858241933}
   opennedGate: {fileID: -2964255017067162442, guid: 681ff1b5af404d970b8faea9246b40bd, type: 3}
+  generator: {fileID: 1395438838}
 --- !u!58 &1858241932
 CircleCollider2D:
   m_ObjectHideFlags: 0

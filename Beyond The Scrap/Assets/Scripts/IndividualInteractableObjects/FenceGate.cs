@@ -22,6 +22,9 @@ public class FenceGate : MonoBehaviour
 
     private SpriteRenderer sr;
 
+    [SerializeField]
+    private GeneratorInteract generator;
+
     void Start() {
         selfCollider = GetComponent<Collider2D>();
         sr = GetComponent<SpriteRenderer>();
@@ -35,14 +38,18 @@ public class FenceGate : MonoBehaviour
 
         prompt.SetActive(triggerDetector.playerInRange);
 
+        if (generator.solved)
+        {
+            isClosed = false;
+            sr.sprite = opennedGate;
+        }
+
         if (triggerDetector.playerInRange && isClosed) {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                isClosed = false;
-                // display a massage to the player saying that this door can be openned in another way
+                // display a message to the player saying that this door can be openned in another way
                 selfCollider.enabled = false;
                 ShowLockedMessage();
-                sr.sprite = opennedGate;
             }
         }
     }
