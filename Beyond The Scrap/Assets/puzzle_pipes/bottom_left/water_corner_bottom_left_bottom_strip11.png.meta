@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 06e7fa58e8f0b4e3380966a64896d7e8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4859754204175264079
+    second: water_corner_bottom_left_bottom_strip11_0
+  - first:
+      213: 8870834283492466476
+    second: water_corner_bottom_left_bottom_strip11_1
+  - first:
+      213: -6767025590812032946
+    second: water_corner_bottom_left_bottom_strip11_2
+  - first:
+      213: -7664225812173495684
+    second: water_corner_bottom_left_bottom_strip11_3
+  - first:
+      213: -582243819910171096
+    second: water_corner_bottom_left_bottom_strip11_4
+  - first:
+      213: -6876722269023724317
+    second: water_corner_bottom_left_bottom_strip11_5
+  - first:
+      213: -3175043541660822711
+    second: water_corner_bottom_left_bottom_strip11_6
+  - first:
+      213: 6804565392293103482
+    second: water_corner_bottom_left_bottom_strip11_7
+  - first:
+      213: 5755803159542909617
+    second: water_corner_bottom_left_bottom_strip11_8
+  - first:
+      213: 1366212478561724060
+    second: water_corner_bottom_left_bottom_strip11_9
+  - first:
+      213: -5094206144318838057
+    second: water_corner_bottom_left_bottom_strip11_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: water_corner_bottom_left_bottom_strip11_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 19
+        width: 42
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f49e39b53b0517340800000000000000
+      internalID: 4859754204175264079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_corner_bottom_left_bottom_strip11_1
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 0
+        width: 86
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2fdce8f7c88b1b70800000000000000
+      internalID: 8870834283492466476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_corner_bottom_left_bottom_strip11_2
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 19
+        width: 43
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e40cba11412b612a0800000000000000
+      internalID: -6767025590812032946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_corner_bottom_left_bottom_strip11_3
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 19
+        width: 43
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c72e40b0b3333a590800000000000000
+      internalID: -7664225812173495684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_corner_bottom_left_bottom_strip11_4
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 19
+        width: 46
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8267695a4547be7f0800000000000000
+      internalID: -582243819910171096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_corner_bottom_left_bottom_strip11_5
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 19
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ec92dfd789f090a0800000000000000
+      internalID: -6876722269023724317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_corner_bottom_left_bottom_strip11_6
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 19
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94398e098baffe3d0800000000000000
+      internalID: -3175043541660822711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_corner_bottom_left_bottom_strip11_7
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 19
+        width: 53
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a770c821c2cae6e50800000000000000
+      internalID: 6804565392293103482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_corner_bottom_left_bottom_strip11_8
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 19
+        width: 56
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ba40a16a78b0ef40800000000000000
+      internalID: 5755803159542909617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_corner_bottom_left_bottom_strip11_9
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 19
+        width: 58
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c96a060c203c5f210800000000000000
+      internalID: 1366212478561724060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_corner_bottom_left_bottom_strip11_10
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 19
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7da6343808ebd49b0800000000000000
+      internalID: -5094206144318838057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      water_corner_bottom_left_bottom_strip11_0: 4859754204175264079
+      water_corner_bottom_left_bottom_strip11_1: 8870834283492466476
+      water_corner_bottom_left_bottom_strip11_10: -5094206144318838057
+      water_corner_bottom_left_bottom_strip11_2: -6767025590812032946
+      water_corner_bottom_left_bottom_strip11_3: -7664225812173495684
+      water_corner_bottom_left_bottom_strip11_4: -582243819910171096
+      water_corner_bottom_left_bottom_strip11_5: -6876722269023724317
+      water_corner_bottom_left_bottom_strip11_6: -3175043541660822711
+      water_corner_bottom_left_bottom_strip11_7: 6804565392293103482
+      water_corner_bottom_left_bottom_strip11_8: 5755803159542909617
+      water_corner_bottom_left_bottom_strip11_9: 1366212478561724060
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
