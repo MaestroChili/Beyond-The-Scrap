@@ -29,7 +29,7 @@ public class Nozzle : HeatItem
     }
 
     public void ControlSteam() {
-        if (this.heat >= 50f) {
+        if (source.heat >= 50f) {
             steamCollider.enabled = true;
             if (!ps.isPlaying) {
                 ps.Play();
