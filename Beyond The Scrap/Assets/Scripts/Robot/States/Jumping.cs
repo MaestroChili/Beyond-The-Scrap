@@ -18,6 +18,7 @@ public class Jumping : RobotState
         robot.hasLeftGround = true;
 
         MoveHorizontally();
+        JumpAndFall();
         
 
         if (robot.velocity.y <= 0f) {

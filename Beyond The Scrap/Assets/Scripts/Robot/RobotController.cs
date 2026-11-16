@@ -24,7 +24,7 @@ public class RobotController : MonoBehaviour
 
     // Collider Settings
     private Collider2D capsuleCollider;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     public bool grounded;
 
 
@@ -76,10 +76,10 @@ public class RobotController : MonoBehaviour
         // Inside RobotController.cs Update()
         if (!IsInDialogueState())
         {
-            if (!grounded || velocity.y > 0) {
-                velocity.y -= gravity * Time.deltaTime;
-            } 
-            else if (velocity.y < 0) {
+            // if (!grounded || velocity.y > 0) {
+            //     velocity.y -= gravity * Time.deltaTime;
+            // } 
+            if (velocity.y < 0 && grounded) {
                 velocity.y = 0;
             }
         }          

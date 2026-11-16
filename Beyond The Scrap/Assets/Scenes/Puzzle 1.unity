@@ -960,6 +960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerDetector
   targetTag: Player
+  triggeringRobot: {fileID: 0}
   onTriggerEntered2D:
     m_PersistentCalls:
       m_Calls: []
@@ -1600,7 +1601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4391578229729587507, guid: d1de94b10ece2c310a11de5fe2ff0ec4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000022768205
+      value: -0.00088078156
       objectReference: {fileID: 0}
     - target: {fileID: 5145656902132164539, guid: d1de94b10ece2c310a11de5fe2ff0ec4, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4215,6 +4216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerDetector
   targetTag: Player
+  triggeringRobot: {fileID: 0}
   onTriggerEntered2D:
     m_PersistentCalls:
       m_Calls: []
@@ -5253,6 +5255,43 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5759979263971759486, guid: 1d9f0d90aae7fe7249674c7699a90913, type: 3}
   m_PrefabInstance: {fileID: 941650142}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &963146029 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4123419468483307709, guid: f325e8f49cec2445687a225aff448404, type: 3}
+  m_PrefabInstance: {fileID: 2082123284}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &963146030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963146029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906fa898baa7c872f9f2f972450a0aa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerDetector
+  targetTag: Player
+  triggeringRobot: {fileID: 0}
+  onTriggerEntered2D:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1240906173}
+        m_TargetAssemblyTypeName: Nozzle, Assembly-CSharp
+        m_MethodName: LaunchRobot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTriggerExited2D:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &987465410
 GameObject:
   m_ObjectHideFlags: 0
@@ -6616,6 +6655,17 @@ Transform:
   - {fileID: 1392050063}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1240906173 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2553123506090806260, guid: f325e8f49cec2445687a225aff448404, type: 3}
+  m_PrefabInstance: {fileID: 2082123284}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f00343e8eee150efacd366c0ab971e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Nozzle
 --- !u!4 &1246450910 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5759979263971759486, guid: 1d9f0d90aae7fe7249674c7699a90913, type: 3}
@@ -7484,6 +7534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerDetector
   targetTag: Player
+  triggeringRobot: {fileID: 0}
   onTriggerEntered2D:
     m_PersistentCalls:
       m_Calls: []
@@ -14939,6 +14990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerDetector
   targetTag: Player
+  triggeringRobot: {fileID: 0}
   onTriggerEntered2D:
     m_PersistentCalls:
       m_Calls: []
@@ -16444,6 +16496,26 @@ PrefabInstance:
       propertyPath: source
       value: 
       objectReference: {fileID: 667071164}
+    - target: {fileID: 2553123506090806260, guid: f325e8f49cec2445687a225aff448404, type: 3}
+      propertyPath: triggerDetector
+      value: 
+      objectReference: {fileID: 963146030}
+    - target: {fileID: 2740927435027120612, guid: f325e8f49cec2445687a225aff448404, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.745
+      objectReference: {fileID: 0}
+    - target: {fileID: 2740927435027120612, guid: f325e8f49cec2445687a225aff448404, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2740927435027120612, guid: f325e8f49cec2445687a225aff448404, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2740927435027120612, guid: f325e8f49cec2445687a225aff448404, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 6943693421977669878, guid: f325e8f49cec2445687a225aff448404, type: 3}
       propertyPath: m_Name
       value: Nozzle
@@ -16451,7 +16523,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4123419468483307709, guid: f325e8f49cec2445687a225aff448404, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 963146030}
   m_SourcePrefab: {fileID: 100100000, guid: f325e8f49cec2445687a225aff448404, type: 3}
 --- !u!1001 &2086017792
 PrefabInstance:

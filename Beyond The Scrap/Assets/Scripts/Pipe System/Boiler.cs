@@ -20,12 +20,6 @@ public class Boiler : HeatItem
     // Update is called once per frame
     void Update()
     {
-        if (this.hot) {
-            sr.sprite = hotSprite;
-        } else {
-            sr.sprite = coldSprite;
-        }
-
         prompt.SetActive(triggerDetector.playerInRange);
 
         if (triggerDetector.playerInRange) {
@@ -33,6 +27,11 @@ public class Boiler : HeatItem
             if (Input.GetKeyDown(KeyCode.E))
             {
                 ToggleHeat();
+                if (this.hot) {
+                    sr.sprite = hotSprite;
+                } else {
+                    sr.sprite = coldSprite;
+                }
             }
         }
     }

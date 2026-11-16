@@ -8,6 +8,9 @@ public class TriggerDetector : MonoBehaviour
     [SerializeField]
     private string targetTag = "Player";
 
+    public RobotController triggeringRobot;
+    public MovableObject triggeringObject;
+
     [Header("Events")]
     public UnityEvent onTriggerEntered2D;
     public UnityEvent onTriggerExited2D;
@@ -16,8 +19,11 @@ public class TriggerDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag(targetTag)) {
-            Debug.Log("entered");
+            triggeringRobot = other.GetComponent<RobotController>();
             playerInRange = true;
+            onTriggerEntered2D.Invoke();
+        } else if (other.CompareTag("movable object")) {
+            triggeringObject = other.GetComponent<MovableObject>();
             onTriggerEntered2D.Invoke();
         }
     }
@@ -26,6 +32,8 @@ public class TriggerDetector : MonoBehaviour
         if (other.CompareTag(targetTag)) {
             playerInRange = false;
             onTriggerExited2D.Invoke();
+            triggeringObject = null;
+            triggeringRobot = null;
         }
     }
 }

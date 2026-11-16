@@ -37,13 +37,15 @@ public abstract class RobotState
         /// else if the robot is in in the air
         ///     robot has left ground
         ///     robot switches to falling state
+        
+        robot.velocity.y -= robot.gravity * Time.deltaTime;
         bool jumpPressed = robot.jumpBufferCounter > 0f;
         if (jumpPressed && robot.coyoteCounter > 0f) {
             robot.jumpBufferCounter = 0f;
             robot.coyoteCounter = 0f;
             robot.velocity.y = robot.jumpForce;
             robot.SwitchState(new Jumping(robot));
-        } else if (!robot.grounded) {
+        } else if (!robot.grounded && robot.currentState is not Falling) {
                 robot.hasLeftGround = true;
                 robot.SwitchState(new Falling(robot));
         }

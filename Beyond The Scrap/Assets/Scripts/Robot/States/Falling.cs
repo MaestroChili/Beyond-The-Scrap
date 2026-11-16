@@ -15,8 +15,7 @@ public class Falling : RobotState
     public override void Update() {
 
         MoveHorizontally();
-
-        Debug.Log("Grounded: " + robot.grounded + " Left Ground: " + robot.hasLeftGround + " Velocity: " + robot.velocity.y);
+        JumpAndFall();
 
         // Only land if we left the ground first, are now grounded, and aren't moving upward anymore
         if (robot.hasLeftGround && robot.grounded && robot.velocity.y <= 0.1f) {
