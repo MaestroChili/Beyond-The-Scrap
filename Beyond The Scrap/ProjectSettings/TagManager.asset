@@ -8,6 +8,7 @@ TagManager:
   - SteamPipe
   - Steam
   - Interactable
+  - movable object
   layers:
   - Default
   - TransparentFX

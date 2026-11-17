@@ -53,7 +53,7 @@ public class Nozzle : HeatItem
         if (triggerDetector.triggeringObject != null)
         {
             Rigidbody2D rb = triggerDetector.triggeringObject.rb;
-            rb.velocity = launchDirection * launchForce;
+            rb.linearVelocity = launchDirection * launchForce;
         }
 
         if (triggerDetector.triggeringRobot != null)
