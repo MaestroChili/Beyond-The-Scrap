@@ -9,6 +9,7 @@ TagManager:
   - Steam
   - Interactable
   - movable object
+  - Ball
   layers:
   - Default
   - TransparentFX
