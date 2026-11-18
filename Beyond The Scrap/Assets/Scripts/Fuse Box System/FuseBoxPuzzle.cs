@@ -10,6 +10,7 @@ public class FuseboxPuzzle : MonoBehaviour
     [SerializeField] private int[] correctOrder = { 1, 2, 3, 4, 5, 6 };
     [SerializeField] private float resetAnimationDuration = 1f;
     [SerializeField] private GameObject completionMessage;
+    public bool IsCompleted { get; private set; } = false;
     private bool[] isFlipped = new bool[6];
     private int currentStep = 0;
     private bool isResetting = false;
@@ -37,12 +38,17 @@ public class FuseboxPuzzle : MonoBehaviour
         isFlipped[switchIndex] = true;
         switchButtons[switchIndex].interactable = false;
 
+        Debug.Log("Pressed switch: " + (switchIndex + 1) +
+          " | Current step: " + currentStep +
+          " | Expected switch: " + correctOrder[currentStep]);
+
         if (switchIndex == correctOrder[currentStep] - 1)
         {
             currentStep++;
 
             if (currentStep == correctOrder.Length)
             {
+                IsCompleted = true;
                 completionMessage.SetActive(true);
                 Debug.Log("Fusebox puzzle completed!");
             }
@@ -64,7 +70,7 @@ public class FuseboxPuzzle : MonoBehaviour
 
             if (isFlipped[i])
             {
-                switchAnimators[i].SetTrigger("Reset");
+                switchAnimators[i].Play("Switch_Reset", 0, 0f);
             }
         }
 
@@ -78,5 +84,28 @@ public class FuseboxPuzzle : MonoBehaviour
 
         currentStep = 0;
         isResetting = false;
+    }
+
+    public void ResetPuzzleState()
+    {
+        StopAllCoroutines();
+
+        for (int i = 0; i < switchButtons.Length; i++)
+        {
+            isFlipped[i] = false;
+            switchButtons[i].interactable = true;
+
+            switchAnimators[i].ResetTrigger("Flip");
+            switchAnimators[i].ResetTrigger("Reset");
+
+            switchAnimators[i].Play("Off", 0, 0f);
+            switchAnimators[i].Update(0f);
+        }
+
+        currentStep = 0;
+        isResetting = false;
+        IsCompleted = false;
+
+        completionMessage.SetActive(false);
     }
 }
