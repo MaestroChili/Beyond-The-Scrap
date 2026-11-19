@@ -26,7 +26,7 @@ public abstract class RobotState
         if (moveInput != Vector2.zero) {
             robot.velocity.x = Mathf.MoveTowards(robot.velocity.x, robot.horizontalSpeed * moveInput.x, robot.acceleration);
         } else {
-            robot.velocity.x = Mathf.MoveTowards(robot.velocity.x, 0, robot.acceleration);
+            robot.velocity.x = Mathf.MoveTowards(robot.velocity.x, 0, robot.deceleration);
         }
     }
 

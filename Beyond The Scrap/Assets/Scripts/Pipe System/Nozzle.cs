@@ -59,7 +59,7 @@ public class Nozzle : HeatItem
         if (triggerDetector.triggeringRobot != null)
         {
             RobotController robot = triggerDetector.triggeringRobot;
-            robot.velocity = launchDirection * launchForce;
+            robot.velocity += launchDirection * launchForce;
             robot.SwitchState(new Jumping(robot));
         }
     }

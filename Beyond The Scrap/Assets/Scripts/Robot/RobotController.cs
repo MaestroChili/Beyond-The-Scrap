@@ -4,7 +4,8 @@ public class RobotController : MonoBehaviour
 {
 
     // Character Stats
-    public float acceleration = 2f;
+    public float acceleration = 1f;
+    public float deceleration = 0.5f;
     public float verticalSpeed = 20f;
     public float horizontalSpeed = 20f;
     public int maxHealth = 10;

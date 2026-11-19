@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2bec453adaac846b5d8c8117b0da27, type: 3}
+  m_Name: Lodestone
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  id: 3
+  description: Powers The ship.
+  icon: {fileID: -5433712442242301565, guid: 01f2504d211a3801e93b7586c3347a69, type: 3}
+  prefab: {fileID: 345034831854174721, guid: 2a5fe25adbf8faf0eb5cadb106fb7136, type: 3}
