@@ -17,6 +17,7 @@ public class RobotController : MonoBehaviour
     public float jumpBufferTime = 0.1f;   // grace before landing
     public float gravity = 10f;
     public bool hasLeftGround = false;
+    public float maxSpeed = 20f;
     
     // Input thingy
     public InputActions inputActions;
@@ -83,7 +84,8 @@ public class RobotController : MonoBehaviour
             if (velocity.y < 0 && grounded) {
                 velocity.y = 0;
             }
-        }          
+        }
+        ClampVelocity();          
     }
 
     private void FixedUpdate() {
@@ -145,6 +147,12 @@ public class RobotController : MonoBehaviour
     public bool IsInDialogueState()
     {
         return currentState is RobotDialogueState;
+    }
+
+    public void ClampVelocity()
+    {
+        velocity.x = Mathf.Clamp(velocity.x, -maxSpeed, maxSpeed);
+        velocity.y = Mathf.Clamp(velocity.y, -maxSpeed, maxSpeed);
     }
 }
 
