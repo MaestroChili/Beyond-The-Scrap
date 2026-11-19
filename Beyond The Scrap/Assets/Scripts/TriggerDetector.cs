@@ -14,6 +14,7 @@ public class TriggerDetector : MonoBehaviour
     [Header("Events")]
     public UnityEvent onTriggerEntered2D;
     public UnityEvent onTriggerExited2D;
+    public UnityEvent onTriggerStay2D;
 
     public bool playerInRange { get; private set; }
 
@@ -34,6 +35,17 @@ public class TriggerDetector : MonoBehaviour
             onTriggerExited2D.Invoke();
             triggeringObject = null;
             triggeringRobot = null;
+        }
+    }
+    
+    private void OnTriggerStay2D(Collider2D other) {
+        if (other.CompareTag(targetTag)) {
+            triggeringRobot = other.GetComponent<RobotController>();
+            playerInRange = true;
+            onTriggerStay2D.Invoke();
+        } else if (other.CompareTag("movable object")) {
+            triggeringObject = other.GetComponent<MovableObject>();
+            onTriggerStay2D.Invoke();
         }
     }
 }

@@ -28,6 +28,7 @@ public abstract class RobotState
         } else {
             robot.velocity.x = Mathf.MoveTowards(robot.velocity.x, 0, robot.deceleration);
         }
+        robot.velocity.x = Mathf.Clamp(robot.velocity.x, -20f, 20f);
     }
 
     public void JumpAndFall() {
@@ -49,5 +50,6 @@ public abstract class RobotState
                 robot.hasLeftGround = true;
                 robot.SwitchState(new Falling(robot));
         }
+        robot.velocity.y = Mathf.Clamp(robot.velocity.y, -20f, 20f);
     }
 }
