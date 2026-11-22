@@ -14574,7 +14574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4391578229729587507, guid: d1de94b10ece2c310a11de5fe2ff0ec4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000014668896
+      value: -0.00042707525
       objectReference: {fileID: 0}
     - target: {fileID: 5145656902132164539, guid: d1de94b10ece2c310a11de5fe2ff0ec4, type: 3}
       propertyPath: m_AnchorMax.y
@@ -43738,37 +43738,13 @@ MonoBehaviour:
   triggeringObject: {fileID: 0}
   onTriggerEntered2D:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1240906173}
-        m_TargetAssemblyTypeName: Nozzle, Assembly-CSharp
-        m_MethodName: LaunchObject
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onTriggerExited2D:
     m_PersistentCalls:
       m_Calls: []
   onTriggerStay2D:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1240906173}
-        m_TargetAssemblyTypeName: Nozzle, Assembly-CSharp
-        m_MethodName: LaunchObject
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!4 &963379732 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6396904645614038544, guid: 2036db42b7214c132bf7792d22d165bf, type: 3}
@@ -55657,17 +55633,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2036db42b7214c132bf7792d22d165bf, type: 3}
---- !u!114 &1240906173 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2553123506090806260, guid: f325e8f49cec2445687a225aff448404, type: 3}
-  m_PrefabInstance: {fileID: 2082123284}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f00343e8eee150efacd366c0ab971e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Nozzle
 --- !u!1001 &1241823214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -100613,12 +100578,24 @@ PrefabInstance:
       value: Gear
       objectReference: {fileID: 0}
     - target: {fileID: 7629764302003981649, guid: 1102b06a242b641bbbee5773e98d6dff, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7629764302003981649, guid: 1102b06a242b641bbbee5773e98d6dff, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7629764302003981649, guid: 1102b06a242b641bbbee5773e98d6dff, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7629764302003981649, guid: 1102b06a242b641bbbee5773e98d6dff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.1994686
+      value: -3.29
       objectReference: {fileID: 0}
     - target: {fileID: 7629764302003981649, guid: 1102b06a242b641bbbee5773e98d6dff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7060299
+      value: -0.45
       objectReference: {fileID: 0}
     - target: {fileID: 7629764302003981649, guid: 1102b06a242b641bbbee5773e98d6dff, type: 3}
       propertyPath: m_LocalPosition.z
