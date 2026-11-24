@@ -33,8 +33,10 @@ public class TriggerDetector : MonoBehaviour
         if (other.CompareTag(targetTag)) {
             playerInRange = false;
             onTriggerExited2D.Invoke();
-            triggeringObject = null;
             triggeringRobot = null;
+        } else if (other.CompareTag("movable object")) {
+            onTriggerExited2D.Invoke();
+            triggeringObject = null;
         }
     }
     
