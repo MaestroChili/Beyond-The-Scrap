@@ -18,7 +18,6 @@ public abstract class HeatItem : MonoBehaviour
     [SerializeField]
     private float redPerHeat = 0.005f;   // red added per point of heat
 
-
     public void HeatOn(){
         this.hot = true;
     }

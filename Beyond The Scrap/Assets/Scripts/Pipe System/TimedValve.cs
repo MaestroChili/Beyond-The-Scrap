@@ -10,6 +10,9 @@ public class TimedValve : HeatItem
     [SerializeField] private Sprite onSprite;
     [SerializeField] private float maxTemp = 99.9f;
 
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip valveOnClip;
+
     [SerializeField] private TriggerDetector triggerDetector;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -45,6 +48,7 @@ public class TimedValve : HeatItem
             {
                 ToggleValve();
                 sr.sprite = onSprite;
+                audioSource.PlayOneShot(valveOnClip);
             }
         }
     }

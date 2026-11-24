@@ -11,6 +11,10 @@ public class Boiler : HeatItem
     [SerializeField]
     private Sprite coldSprite;
 
+    // [SerializeField] private AudioSource audioSource;
+    // [SerializeField] private AudioClip boilerOnClip;
+    // [SerializeField] private AudioClip boilerOffClip;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
