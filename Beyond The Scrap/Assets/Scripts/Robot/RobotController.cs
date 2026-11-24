@@ -28,6 +28,7 @@ public class RobotController : MonoBehaviour
     private Collider2D capsuleCollider;
     public Rigidbody2D rb;
     public bool grounded;
+    public bool roofed;
 
 
     public Vector2 velocity;
@@ -46,7 +47,7 @@ public class RobotController : MonoBehaviour
         inputActions = new InputActions();
 
         anim = GetComponent<Animator>();
-    sr = GetComponent<SpriteRenderer>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     private void Start()
