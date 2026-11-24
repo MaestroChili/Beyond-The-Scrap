@@ -3,14 +3,14 @@ using UnityEngine;
 public class TimedValve : HeatItem
 {
 
-    [SerializeField]
-    private HeatItem source;
-    [SerializeField]
-    private bool turnedOn = false;
+    [SerializeField] private HeatItem source;
+    [SerializeField] private bool turnedOn = false;
     public GameObject prompt;
+    [SerializeField] private Sprite offSprite;
+    [SerializeField] private Sprite onSprite;
+    [SerializeField] private float maxTemp = 99.9f;
 
-    [SerializeField]
-    private TriggerDetector triggerDetector;
+    [SerializeField] private TriggerDetector triggerDetector;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,9 +29,10 @@ public class TimedValve : HeatItem
             HeatOff();
         }
 
-        if (this.heat > 99.9) {
+        if (this.heat > maxTemp) {
             HeatOff();
             turnedOn = false;
+            sr.sprite = offSprite;
         }
         ControlTemperature();
         UpdateColor();
@@ -40,9 +41,10 @@ public class TimedValve : HeatItem
 
         if (triggerDetector.playerInRange) {
             // display the interaction menu
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && !turnedOn)
             {
                 ToggleValve();
+                sr.sprite = onSprite;
             }
         }
     }
